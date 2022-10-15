@@ -14,13 +14,15 @@ public class Main{
             
             if(num1 == 1) continue;
             int j = 2;
-            while(j<=Math.sqrt(num1)){
+            while(j<= Math.sqrt(num1)){
                 if(num1%j==0){
                     check = false;
+                    break;
                 }
                 j++;
             }
             if(check) count++;
+            //while문이 정상적으로 끝나는 것이 아닌 break문을 사용해 끝나게 될 경우에도 count++을 실행하기 때문에 해당 부분을 판단할 boolean이 필요했던 것
         }
         System.out.println(count);
     }
