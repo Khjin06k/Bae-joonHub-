@@ -13,7 +13,6 @@ public class Main{
         }
         
         int[][] check = new int[100][100]; //흰색 도화지
-        int count = 1;
         //입력받은 색종이들을 하나씩 흰색 도화지 영역에 표시함.
         for(int i = 0; i<num; i++){
             int plusx = 0;
@@ -23,20 +22,19 @@ public class Main{
                 int plusy = 0;
                 int y = colorPaper[i][1];
                 while(plusy<10){
-                    check[x][y] += count;
+                    check[x][y] = 1;
                     y++;
                     plusy++;
                 }
                 x++;
                 plusx++;
             }
-            count++;
         }
         
         int result = 0;
         for(int i = 0; i<100; i++){
             for(int j = 0; j<100; j++){
-                if(check[i][j] != 0) result++;
+                if(check[i][j] == 1) result++;
             }
         }
         
