@@ -10,9 +10,7 @@ class Solution {
                 break;
             }
         }
-        for(int k = j; k<str.length; k++){
-            answer += str[k];
-        }
-        return answer;
+        
+        return n_str.substring(j, n_str.length());
     }
 }
